@@ -1,14 +1,10 @@
-/* VARIABLES */
-:root {
-  --light-background: #f2ece4;
-  --light-text: #036;
-  /* --main-text-color : #fff; */
-  /* --main-bg-color : #fff; */
-  /* --main-font-size : 16px; */
-  /* --main-line-height : 1.5; */
+/* MIXINS */
+.site-header__menu-btn {
+  background-color: transparent;
+  border: none;
 }
 
-/* MIXINS */ /**
+/**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
@@ -318,7 +314,26 @@ template {
   display: none;
 }
 
-/* FONTS */ /* GENERAL */
+/* FONTS */
+@font-face {
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ibarra-real-nova-v20-latin-700.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v20-latin-700.woff") format("woff");
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/public-sans-v14-latin-regular.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/public-sans-v14-latin-700.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-700.woff") format("woff");
+}
+/* GENERAL */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -352,10 +367,10 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", "Arial", sans-serif; */
-  /* font-size: 16px; */
-  /* font-weight: 400; */
-  /* line-height: var(--main-line-height); */
+  font-family: "Public Sans", "Arial", sans-serif;
+  font-weight: 400;
+  background-color: #fafafa;
+  overflow-x: hidden;
 }
 
 /* STICKY-FOOTER */
@@ -383,7 +398,436 @@ body {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 0 20px;
-}/*# sourceMappingURL=main.css.map */
+  padding: 0 32px;
+}
+
+/* SITE HEADER STYLES START */
+.body--active {
+  overflow: hidden;
+}
+
+.site-header {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.site-header--active .site-nav {
+  display: block;
+}
+
+.site-header--active .site-header__menu-btn {
+  width: 18px;
+  height: 19px;
+  background-image: url("../images/exit.svg");
+}
+
+.site-header__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-header__menu-btn {
+  width: 24px;
+  height: 13px;
+  background-image: url("../images/hamburger.svg");
+  background-repeat: no-repeat;
+}
+
+.site-nav {
+  display: none;
+  position: absolute;
+  top: 54px;
+  right: 0;
+  width: 100%;
+  max-width: 223px;
+  padding: 40px 0;
+  background-color: #33323D;
+}
+
+.site-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.site-nav__link--active {
+  color: #5FB4A2;
+}
+
+@media only screen and (min-width: 480px) {
+  .site-header {
+    padding-top: 64px;
+    padding-bottom: 47px;
+  }
+  .site-header__menu-btn {
+    display: none;
+  }
+  .site-nav {
+    display: block;
+    position: static;
+    width: 100%;
+    max-width: 305px;
+    padding: 0;
+    background-color: transparent;
+  }
+  .site-nav__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+  }
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .site-nav__link {
+    color: #33323D;
+  }
+  .site-nav__link--active {
+    color: #5FB4A2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-header {
+    padding-bottom: 54px;
+  }
+}
+/* HERO SECTION STYLES START */
+.hero {
+  padding-bottom: 96px;
+}
+
+.hero__inner {
+  padding-top: 295px;
+  background-image: url("../images/hero-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero__info {
+  max-width: 514px;
+  padding-top: 24px;
+  background-color: #FAFAFA;
+}
+
+.hero__title-box {
+  max-width: 311px;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.hero__link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 17px 38px;
+  padding-left: 85px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  background-color: #203A4C;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hero__link:hover::before {
+  background-image: url("../images/link-before-img-hover.svg");
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hero__link:hover {
+  background-color: #5FB4A2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hero__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/link-before-img.svg");
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (min-width: 576px) {
+  .hero__inner {
+    padding-top: 322px;
+    background-image: url("../images/hero-bg-tablet.jpg");
+  }
+  .hero__info {
+    padding-top: 56px;
+  }
+  .hero__title-box {
+    max-width: 458px;
+  }
+  .hero__title {
+    margin-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 150px;
+  }
+  .hero__inner {
+    padding-top: 243px;
+    background-image: url("../images/hero-bg-desc.jpg");
+    background-size: contain;
+  }
+  .hero__info {
+    max-width: 445px;
+  }
+  .hero__title-box {
+    max-width: 390px;
+  }
+  .hero__title {
+    margin-bottom: 53px;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.446429px;
+  }
+}
+/* ABOUT SECTION START */
+.about {
+  padding-bottom: 115px;
+}
+
+.about__inner {
+  max-width: 850px;
+}
+
+.about-img {
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.about__info {
+  max-width: 500px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 51px;
+  border-top: 1px solid #DCDCDE;
+  border-bottom: 1px solid #DCDCDE;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 28px;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.about__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 35px 16px 31px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  color: #33323D;
+  border: 1px solid #33323D;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.about__link:hover {
+  color: #fff;
+  background-color: #33323D;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+@media only screen and (min-width: 700px) {
+  .about {
+    padding-bottom: 96px;
+  }
+  .about__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about-img {
+    margin: 0;
+  }
+  .about__info {
+    max-width: 300px;
+    padding-top: 51px;
+    padding-bottom: 46px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .about__info {
+    max-width: 339px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .about__inner {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about {
+    padding-bottom: 150px;
+  }
+  .about__inner {
+    max-width: 1015px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/* INTEREST SECTION START */
+.interest {
+  padding-bottom: 80px;
+}
+
+.interest__info {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.interest__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+  text-align: center;
+}
+
+.interest__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 34px 16px 31px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  color: #33323D;
+  border: 1px solid #33323D;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.interest__link:hover {
+  color: #fff;
+  background-color: #33323D;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+@media only screen and (min-width: 576px) {
+  .interest__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+  }
+  .interest__title-box {
+    max-width: 330px;
+  }
+  .interest__title {
+    margin: 0;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .interest__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 20px;
+  }
+  .interest__title::after {
+    content: "";
+    max-width: 115px;
+    height: 1px;
+    background-color: red;
+  }
+}
