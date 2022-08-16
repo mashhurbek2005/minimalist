@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,16 @@
   <title>Minimalist portfolio website</title>
   <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body class="body">
-  
+
 
   <!-- site header start -->
   <header class="site-header">
     <div class="container">
       <div class="site-header__inner">
         <a class="logo" href="./index.html">
-          <img class="logo__img" src="images/logo.svg" 
-            width="60" height="32"
-            alt="minimalist portfolio site's logo">
+          <img class="logo__img" src="images/logo.svg" width="60" height="32" alt="minimalist portfolio site's logo">
         </a>
 
         <button class="site-header__menu-btn js-menu-open-btn" type="button"></button>
@@ -54,7 +54,7 @@
               </h1>
             </div>
 
-            <a class="hero__link" href="#">ABOUT ME</a>
+            <a class="hero__link" href="#about-section">ABOUT ME</a>
           </div>
         </div>
       </div>
@@ -62,55 +62,31 @@
     <!-- hero section end -->
 
     <!-- about section start -->
-    <section class="about">
+    <section class="about" id="about-section">
       <div class="container">
         <div class="about__inner">
-          <picture>
+          <picture class="about__picture">
             <!-- Webp images -->
 
-            <source class="about-img" type="image/webp"
-              width="540"
-              height="600"
-              media="(min-width: 1024px)"
-              srcset="./images/about-img-desctop.webp 1x,
-                    ./images/about-img-desctop@2x.jpg 2x"
-            />
+            <source class="about-img" type="image/webp" width="540" height="600" media="(min-width: 1024px)"        srcset="./images/about-img-desctop.webp 1x,
+                    ./images/about-img-desctop@2x.jpg 2x" />
 
-            <source class="about-img" type="image/webp"
-              media="(min-width: 700px)"
-              srcset="./images/about-img-tablet.webp 1x,
-                    ./images/about-img-tablet@2x.webp 2x"
-            />
+            <source class="about-img" type="image/webp" media="(min-width: 650px)" srcset="./images/      about-img-tablet.webp 1x,
+                    ./images/about-img-tablet@2x.webp 2x" />
 
-            <source class="about-img" type="image/webp"
-            srcset="./images/about-img-mobile.webp 1x,
-                  ./images/about-img-mobile@2x.webp 2x"
-            />
+            <source class="about-img" type="image/webp" srcset="./images/about-img-mobile.webp 1x,
+                  ./images/about-img-mobile@2x.webp 2x" />
 
 
 
             <!-- Jpg images -->
-            <source media="(min-width: 1024px)"
-              width="540px"
-              height="600px"
-              srcset="./images/about-img-desctop.jpg 1x, 
-                      ./images/about-img-desctop@2x.jpg 2x"
-            />
+            <source media="(min-width: 1024px)" width="540px" height="600px" srcset="./images/about-img-desctop.jpg 1x, 
+                      ./images/about-img-desctop@2x.jpg 2x" />
 
-            <source class="about-img"
-              media="(min-width: 650px)"
-              srcset="./images/about-img-tablet.jpg 1x, 
-                      ./images/about-img-tablet@2x.jpg 2x"
-            />
+            <source class="about-img" media="(min-width: 650px)" srcset="./images/about-img-tablet.jpg 1x, 
+                      ./images/about-img-tablet@2x.jpg 2x" />
 
-            <img class="about-img" src="images/about-img-mobile.jpg" 
-
-
-
-
-            
-              width="311" 
-              height="346"
+            <img class="about-img" src="images/about-img-mobile.jpg" width="311" height="346"
               srcset="./images/about-img-mobile.jpg 1x, ./images/about-img-mobile@2x.jpg 2x"
               alt="a blond guy in a black suit and a white T-shirt">
           </picture>
@@ -119,10 +95,14 @@
             <h2 class="about__title">About Me</h2>
 
             <p class="about__text">
-              I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work.
+              I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing
+              accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I
+              mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy
+              working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love
+              being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work.
             </p>
 
-            <a class="about__link" href="#">GO TO PORTFOLIO</a>
+            <a class="about__link" href="./portfolio.html">GO TO PORTFOLIO</a>
           </div>
         </div>
       </div>
@@ -142,6 +122,65 @@
     </section>
   </main>
 
+  <!-- site footer start -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <a class="logo logo--footer" href="./index.html">
+          <svg class="logo__img" width="61" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M31.347 26.122 15.673 0 0 26.122h31.347ZM60.082 5.878 44.408 32 28.735 5.878h31.347Z" fill="currentcolor" />
+          </svg>
+        </a>
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">HOME</a>
+            </li>
+
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">PORTFOLIO</a>
+            </li>
+
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">CONTACT ME</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="site-footer__social-list">
+          <li class="site-footer__social-item">
+            <a class="site-footer__social-link" href="#" target="blank">
+              <img class="site-footer__social-img" 
+                src="images/github.svg" 
+                width="25" height="24" 
+                alt="github icon">
+            </a>
+          </li>
+
+          <li class="site-footer__social-item">
+            <a class="site-footer__social-link" href="#" target="blank">
+              <img class="site-footer__social-img" src="images/twitter.svg" 
+                width="24" height="20" 
+                alt="twitter icon">
+            </a>
+          </li>
+
+          <li class="site-footer__social-item">
+            <a class="site-footer__social-link" href="#" target="blank">
+              <img class="site-footer__social-img" src="images/linkedin.svg" 
+                width="24" height="24" 
+                alt="linkedin icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- site footer end -->
+
   <script src="js/main.js"></script>
 </body>
+
 </html>

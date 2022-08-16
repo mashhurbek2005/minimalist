@@ -24,6 +24,7 @@
 }
 
 .interest__link {
+	min-width: 164px;
 	@include link-unstyle;
 	padding: 16px 34px 16px 31px;
 	font-size: 12px;
@@ -34,52 +35,57 @@
 	transition: background-color 0.3s ease;
 }
 
+
 .interest__link:hover {
 	color: #fff;
 	background-color: $main-color;
 	transition: background-color 0.3s ease;
 }
 
-@include mobile-first(576px){
-	.interest__info{
+@include mobile-first(576px) {
+	.interest{
+		padding-bottom: 96px;
+	}
+
+	.interest__info {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		max-width: 100%;
 	}
 
-	.interest__title-box{
-		max-width: 330px;
+	.interest__title-box {
+		max-width: 350px;
 	}
 
-	.interest__title{
+	.interest__title {
 		margin: 0;
 		text-align: left;
 	}
 }
 
-@include mobile-first(700px){
-		.interest__title{
-			display: flex;
-			align-items: center;
-			margin-right: 20px;
-		}
+@include mobile-first(680px) {
+	.interest__line{
+		width: 20%;
+		max-width: 534px;
+		height: 1px;
+		margin: 0 32px;
+		background-color: #DCDCDE;
+	}
+}
 
-		.interest__title::after{
-			content: "";
-			max-width: 115px;
-			height: 1px;
-			background-color: red;
-		}
+@include mobile-first(768px){
+	.interest{
+		padding-bottom: 150px;
+	}
 
-		// .interest__link{
-		// 	margin-left: 20px;
-		// }
+	.interest__line{
+		width: 40%;
+	}
+}
 
-	// .interest__line{
-	// 	width: 100%;
-	// 	max-width: 113px;
-	// 	height: 1px;
-	// 	background-color: #DCDCDE;
-	// }
+@include mobile-first(1024px){
+	.interest__line{
+		width: 48%;
+	}
 }

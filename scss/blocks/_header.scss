@@ -37,7 +37,7 @@
 .site-nav {
 	display: none;
 	position: absolute;
-	top: 54px;
+	top: 55px;
 	right: 0;
 	width: 100%;
 	max-width: 223px;
@@ -89,6 +89,7 @@
 	}
 
 	.site-nav__list {
+		flex-wrap: wrap;
 		justify-content: space-between;
 		flex-direction: row;
 		width: 100%;
