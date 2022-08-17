@@ -1,0 +1,137 @@
+/* CONTACT FORM SECTION START */
+
+.contact-form {
+	padding-bottom: 80px;
+}
+
+.contact-form__title {
+	margin: 0;
+	margin-bottom: 24px;
+	font-family: $second-font;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 42px;
+	letter-spacing: -0.357143px;
+	color: #33323D;
+}
+
+.contact-form__form {
+	width: 100%;
+	max-width: 689px;
+}
+
+.contact-form__label {
+	display: block;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 30px;
+	color: #33323D;
+	mix-blend-mode: normal;
+	opacity: 0.8;
+}
+
+.contact-form__input {
+	display: block;
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 4px;
+	padding: 8px 16px;
+	padding-right: 0;
+	font-size: 13px;
+	line-height: 30px;
+	color: #33323D;
+	background-color: #E6E6E7;
+	outline: none;
+	border: 1px solid #E6E6E7;
+
+	&::placeholder {
+		font-size: 13px;
+		line-height: 30px;
+		color: #33323D;
+		mix-blend-mode: normal;
+		opacity: 0.4;
+	}
+
+	&:focus {
+		border-color: #5FB4A2;
+	}
+
+	&:not(:placeholder-shown):not(:focus):invalid {
+		color: #F43030;
+		border-color: #F43030;
+	}
+
+	&:not(:placeholder-shown):not(:focus):invalid ~ .contact-form__invalid{
+		opacity: 1;
+	}
+}
+
+.contact-form__invalid {
+	display: block;
+	margin-bottom: 9px;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 12px;
+	color: #F43030;
+	opacity: 0;
+}
+
+.contact-form__input--textarea {
+	height: 96px;
+	padding-bottom: 0;
+	resize: none;
+}
+
+.contact-form__btn {
+	display: inline-block;
+	padding: 17px 41px;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	background-color: #203A4C;
+	border: none;
+}
+
+@include mobile-first(576px) {
+	.contact-form {
+		padding-bottom: 96px;
+	}
+
+	.contact-form__title {
+		margin-bottom: 32px;
+	}
+}
+
+@include mobile-first(950px) {
+	.contact-form {
+		padding-bottom: 109px;
+	}
+
+	.contact-form__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.contact-form__title-box {
+		min-width: 205px;
+		margin-right: 47px;
+	}
+
+	.contact-form__title {
+		margin: 0;
+	}
+
+	.contact-form__form {
+		max-width: 635px;
+	}
+}
+
+@include mobile-first(1000px) {
+	.contact-form__title-box {
+		margin: 0;
+	}
+}

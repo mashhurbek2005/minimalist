@@ -37,12 +37,14 @@
 .site-nav {
 	display: none;
 	position: absolute;
+	z-index: 3;
 	top: 55px;
 	right: 0;
 	width: 100%;
 	max-width: 223px;
 	padding: 40px 0;
 	background-color: $main-color;
+	overflow: hidden;
 }
 
 .site-nav__list {
@@ -63,10 +65,6 @@
 	line-height: 14px;
 	letter-spacing: 2px;
 	color: #FFFFFF;
-}
-
-.site-nav__link--active{
-	color: #5FB4A2;
 }
 
 @include mobile-first(480px) {
